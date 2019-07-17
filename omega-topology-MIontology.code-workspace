@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "/Users/lberanger/omega-topology-MIontology"
+		}
+	],
+	"settings": {
+		"python.pythonPath":"~/.envs/omega-topology-MIontology/bin/python"
+	}
+}
