@@ -3,6 +3,7 @@ import os
 import json
 from ontology import Ontology
 from flask_cors import CORS
+import argparse
 __dirname = os.path.dirname(os.path.realpath(__file__))
 
 parser = argparse.ArgumentParser()
