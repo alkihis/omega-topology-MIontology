@@ -35,16 +35,13 @@ def getLabelOf(id):
     else:
         return None
 
-# p = open('full_tree.json', 'w')
-# tree = onto.constructTreeFromRoot("MI:0001", [ 'hasExactSynonym' ])
-# json.dump(tree.toDict(), p)
-
-# testtree = constructTree("MI:0001", ["MI:2224", "MI:0398", "MI:0895", "MI:0364"])
-# p = open('test.json', 'w')
-# json.dump(testtree, p)
-
 term_cache = {}
 
+"""
+Respond a JSON containing the MI ontology name of the given MI ids.
+@expecting HTTP POST; Content-Type: application/json; Body: { "term" [:listofIDs] }
+@returns JSON response; Body: { success: true, terms: TermsObj }; TermsObj as { [MIid: string]: string }
+"""
 @app.route('/term', methods=['POST'])
 def get_term_of():
     if not request.is_json:
